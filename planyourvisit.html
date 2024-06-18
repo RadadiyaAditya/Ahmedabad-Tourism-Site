@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/LYNs30RwktrQ7Lov/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+      });
+    </script>
+    <script src="./jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+      });
+    </script>
+    <link rel="stylesheet" href="planyourvisit.css">
+</head>
+<body>
+     <nav class="nav navbar navbar-expand-lg nav-mask">
+      <div class="container-fluid">
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="Explore.html">Explore</a></li>
+          <li><a href="thingstodo.html">Things to Do</a></li>
+          <li><a href="planyourvisit.html">Plan Your Visit</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <section style="width: 500px;" class="container">
+        <div class="col mt-5 mb-5 p-3 bg-primary bg-opacity-10 border border-white border rounded">
+            <h5 class="text-white">PLAN YOUR TRIP
+            </h5>
+            <form action=""  id="myForm">
+            <div class="form-floating mb-2">
+                <input type="text" class="form-control" id="floatingInputDisabled" placeholder="Enter Name" name="Name">
+                <label for="floatingInputDisabled">Name</label>
+              </div>
+              <div class="form-floating mb-2">
+                <input type="tel" class="form-control" id="floatingInputDisabled" placeholder="phone number" name="Contact">
+                <label for="floatingInputDisabled">Phone Number</label>
+              </div>
+              <div class="form-floating mb-2">
+                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="Email" name="Email">
+                <label for="floatingInputDisabled">Email</label>
+              </div>
+              <div class="form-floating mb-2">
+                <input type="date" class="form-control" id="floatingInputDisabled" placeholder="date" name="A-date">
+                <label for="floatingInputDisabled">Arrival</label>
+              </div>
+              <div class="form-floating mb-2">
+                <input type="date" class="form-control" id="floatingInputDisabled" placeholder="date" name="D-date">
+                <label for="floatingInputDisabled">Departure</label>
+              </div>
+              <div class="form-floating mb-2">
+                <select class="form-select" id="floatingSelectDisabled" aria-label="Floating label disabled select example" name="Event">
+                  <option selected>Select your Event</option>
+                  <option value="Dentist">Dentist</option>
+                  <option value="Cardiologist">Cardiologist</option>
+                  <option value="Audiologist">Audiologist</option>
+                  <option value="Gynecologist">Gynecologist</option>
+                  <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+                  <option value="Radiologist">Radiologist</option>
+                  <option value="Neurologist">Neurologist</option>
+                  <option value="Cardiothoracic Surgeon">Cardiothoracic Surgeon</option>
+                  <option value="ENT Specialist">ENT Specialist</option>
+                  <option value="Other">Other</option>
+                </select>
+                <label for="floatingSelectDisabled">Ongoing Events</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" name="Message" ></textarea>
+                <label for="floatingTextareaDisabled">Specifications</label>
+              </div>
+            </form>
+              <button type="button" class="btn btn-danger "  onclick="SubForm()">Register</button>
+        </div>
+    </section>
+    
+    <footer class="contactusback  ">
+        <div class="mt-1">&nbsp;</div>
+        <h1 >
+          &nbsp;&nbsp;&nbsp;Follow Us:
+          <a href=""><i style="color: white;" class=" mx-4 fa-brands fa-instagram"></i></a>
+          <a href=""><i style="color: white;" class=" mx-4 fa-brands fa-facebook"></i></a>
+          <a href=""><i style="color: white;" class=" mx-4 fa-brands fa-youtube"></i></a>
+          <a href=""><i style="color: white;" class=" mx-4 fa-brands fa-twitter"></i></a>
+        </h1>
+  
+        <div class="row gx-0">
+          <div class="col-2 my-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img  src="./Photos/Red White Minimalist Travel Agency Logo.png" style="width: 75%;height: 100%; " alt=""></div>
+          <div class="col">
+            <div class="my-4 d-flex justify-content-around">
+              
+              <a href="" class="text-decoration-none text-white">
+                  <i class="fa-solid fa-book-open fa-flip mx-2 " style="color: #ffffff;"></i>FREE VISITORS GUIDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+              </a>
+              
+              <a href="" class="text-decoration-none text-white">
+                  <i class="fa-solid fa-envelope fa-bounce mx-2" style="color: #ffffff;"></i>EMAIL SIGN UP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+              </a>
+              
+              <a href="" class="text-decoration-none text-white">
+                  <i class="fa-solid fa-wheelchair-move fa-beat-fade mx-2" style="color: #ffffff;"></i>ACCESSIBLE TOURISM GUIDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+  
+              <a href="" class="text-decoration-none text-white">
+                  <i class="fa-solid fa-user-lock fa-shake mx-2" style="color: #ffffff;"></i>MEMBER LOGIN
+              </a>
+            </div>
+            <hr class="text-white ">
+            <div>
+              <h5 class="mx-5">
+                215th Street, Hollywood Basti, Kanya Chhatralay, Gota Express Highway, Ahmedabad-380006.&nbsp;&nbsp;&nbsp;&nbsp;|
+                &nbsp;&nbsp;&nbsp;&nbsp;Fax: 202-533-0103
+              </h5>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
